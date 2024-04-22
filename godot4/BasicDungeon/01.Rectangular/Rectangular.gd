@@ -7,18 +7,33 @@ extends Node2D
 
 @onready var level: TileMap = $Level
 @onready var camera: Camera2D = $Camera2D
-
+@onready var zscale = Vector2(1,1)
+@onready var data := {}
+@onready var rooms := []
 
 func _ready() -> void:
 	_setup_camera()
 	_generate()
-
+	
+func _input(event):
+	if event.is_action_pressed("ui_accept"):
+		_setup_camera()
+		_generate()
+	if event.is_action_pressed("zoom"):
+		_center_and_zoom_random_room()
+		
+func _center_and_zoom_random_room():
+		var rng := RandomNumberGenerator.new()
+		rng.randomize()
+		var randi = rng.randi_range(0,rooms.size()-1)
+		var selected_room = rooms[randi]
+		print(selected_room)
+		
 
 func _setup_camera() -> void:
 	camera.position = level.map_to_local(level_size / 2)
 	var z := 8 / maxf(level_size.x, level_size.y)
 	camera.zoom = Vector2(z, z)
-
 
 func _generate() -> void:
 	level.clear()
@@ -30,8 +45,6 @@ func _generate_data() -> Array:
 	var rng := RandomNumberGenerator.new()
 	rng.randomize()
 
-	var data := {}
-	var rooms := []
 	for r in range(rooms_max):
 		var room := _get_random_room(rng)
 		if _intersects(rooms, room):

@@ -3,9 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://b6dyithfkwp8q" path="res://RandomWalker/Levels/Level.tscn" id="1"]
 [ext_resource type="Script" path="res://RandomWalker/RandomWalker.gd" id="2"]
 [ext_resource type="Script" path="res://RandomWalker/Camera2D.gd" id="4"]
-[ext_resource type="Texture2D" uid="uid://dd81onfr8y8ep" path="res://RandomWalker/Levels/background-hills.svg" id="5"]
-[ext_resource type="Texture2D" uid="uid://bq6nhkm55ilof" path="res://RandomWalker/Levels/background-trees.svg" id="6"]
-[ext_resource type="Texture2D" uid="uid://c623sgd222egq" path="res://RandomWalker/Levels/background-gradient.svg" id="8"]
+[ext_resource type="Texture2D" uid="uid://c6wokvkr46cbh" path="res://RandomWalker/Levels/background-hills.svg" id="5"]
+[ext_resource type="Texture2D" uid="uid://c82vnjhqgpcos" path="res://RandomWalker/Levels/background-trees.svg" id="6"]
+[ext_resource type="Texture2D" uid="uid://cfrb75bpw4epe" path="res://RandomWalker/Levels/background-gradient.svg" id="8"]
 
 [node name="RandomWalker" type="Node2D"]
 process_mode = 3

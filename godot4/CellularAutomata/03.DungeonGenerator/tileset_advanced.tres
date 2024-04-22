@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=5 format=3 uid="uid://0lrsaid74kdq"]
 
-[ext_resource type="Texture2D" uid="uid://su5mkc70rl7y" path="res://CellularAutomata/03.DungeonGenerator/tileset_mining.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://cca4p3dnlkron" path="res://CellularAutomata/03.DungeonGenerator/tileset_mining.png" id="1"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8i1lp"]
 rough = true

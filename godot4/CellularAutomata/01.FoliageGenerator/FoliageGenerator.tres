@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=7 format=3 uid="uid://brghypklahquq"]
 
-[ext_resource type="Texture2D" uid="uid://c4cprsx5wbupg" path="res://CellularAutomata/01.FoliageGenerator/plants.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://c3wf6uulun34o" path="res://CellularAutomata/01.FoliageGenerator/plants.png" id="1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_83gno"]
 resource_name = "plants.png 0"
