@@ -15,8 +15,15 @@ func _ready() -> void:
 	_setup_camera()
 	_generate()
 	
+func _clear() -> void:
+	level.clear()
+	level.clear_layer(0)
+	rooms.clear()
+	data.clear()
+	
 func _input(event):
 	if event.is_action_pressed("ui_accept"):
+		_clear()
 		_setup_camera()
 		_generate()
 	if event.is_action_pressed("zoom"):
@@ -36,7 +43,7 @@ func _setup_camera() -> void:
 	camera.zoom = Vector2(z, z)
 
 func _generate() -> void:
-	level.clear()
+	_clear()
 	for vector in _generate_data():
 		level.set_cell(0, vector, 0, Vector2i.ZERO, 0)
 
